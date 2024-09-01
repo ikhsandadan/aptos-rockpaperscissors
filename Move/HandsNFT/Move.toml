@@ -1,0 +1,15 @@
+[package]
+name = "HandsNFT"
+version = "1.0.0"
+upgrade_policy = "compatible"
+
+[addresses]
+HandsNFT = "REPLACE_WITH_ADDRESS"
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework/", rev = "mainnet" }
+AptosTokenObjects = {git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-token-objects", rev = "mainnet"}
+
+# For use when developing and testing this module
+[dev-addresses]
+HandsNFT = "0x100"

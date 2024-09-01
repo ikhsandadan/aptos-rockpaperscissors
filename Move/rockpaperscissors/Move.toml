@@ -1,0 +1,16 @@
+[package]
+name = "RockPaperScissors"
+version = "0.0.0"
+upgrade_policy = "compatible"
+
+[addresses]
+RockPaperScissors = "REPLACE_WITH_ADDRESS"
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework", rev = "main" }
+AptosStdlib = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-stdlib", rev = "main" }
+AptosTokenObjects = {git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-token-objects", rev = "mainnet"}
+
+# For use when developing and testing this module
+[dev-addresses]
+RockPaperScissors = "0x100"
