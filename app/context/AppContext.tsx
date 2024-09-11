@@ -15,7 +15,7 @@ import {
     Ed25519PrivateKey 
 } from "@aptos-labs/ts-sdk";
 import { FC, ReactNode, useState, useContext, createContext } from "react";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 
 import { AlertProvider, useAlert } from "../provider/AlertProvider";
 import { AutoConnectProvider } from "../provider/AutoConnectProvider";
@@ -544,6 +544,7 @@ const AppContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
 
     return (
         <ThemeProvider theme={theme}>
+        <StyledEngineProvider injectFirst>
         <AppContexts.Provider
         value={{ 
                 aptos,
@@ -574,6 +575,7 @@ const AppContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
             }}>
             {children}
         </AppContexts.Provider>
+        </StyledEngineProvider>
         </ThemeProvider>
     )
 };
